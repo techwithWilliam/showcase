@@ -70,3 +70,16 @@ class Person implements Comparable<Person> {
 }
 
 	
+
+//OUTPUT
+/*
+* maxAge= Name Johnny Walker Age= 80 
+* minAge= Name John Smith Age= 10
+* averageAge= 39
+* 
+* Name John Smith Age= 10 
+* Name Katherine Jones Age= 20 
+* Name Amy Andersen Age= 30 
+* Name Rick Perry Age= 55 
+* Name Johnny Walker Age= 80
+*/
