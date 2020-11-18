@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>My new form</title>
+<script>
+function validation(){
+	var fname = document.forms["RegForm"]["Fname"];
+	var lname = document.forms["RegForm"]["Lname"];
+	var address = document.forms["RegForm"]["address"];
+	
+	if(fname.value == "")
+		{
+		window.alert("Please enter your first name."); 
+        fname.focus(); 
+        return false; 
+		}
+	
+	if(lname.value == "")
+		{
+		window.alert("Please enter your last name.")
+		lname.focus();
+		return false;
+		}
+	
+	if(address.value == "")
+		{
+		window.alert("Please enter address to continue.")
+		address.focus();
+		return false;
+		}
+	
+}
+
+</script>
+</head>
+<body>
+<!-- 
+           First name: ______________
+           Last name: ______________
+           Address: _____________
+           City: ___________
+           State: ______
+           Zip: _____
+           
+           Comments:
+           
+-->
+<form name="RegForm" action="/submit.php" onsubmit="return validation()" method="post"> 
+<h1>Personal Information:</h1>
+<table style="width:30%" align="center">
+<tr><th align="right" >First name: </th><th><input type="text" align="left" size=45 name="Fname"></th></tr>
+<tr><th align="right" >Last name: </th><th><input type="text" align="left" size=45 name="Lname"></th></tr>
+<tr><th align="right" >Address: </th><th><input type="text" align="left" size=45 name="address"></th></tr>
+<tr><th align="right" >City: </th><th><input type="text" align="left" size=45 name="city"></th></tr>
+<tr><th align="right" >State: </th><th><input type="text" align="left" size=45 name="state"></th></tr>
+<tr><th align="right" >Zip: </th><th><input type="text" align="left" size=45 name="zip"></th></tr>
+<tr><th align="right" >Comments:  </th><th><textarea cols="34" rows="10" align="left" name="Comment">Enter text here</textarea></th></tr> 
+<tr></tr>
+<tr></tr>
+<tr></tr>
+<tr><th></th><th align="center"><input type="submit" value="send" name="Submit"><input type="reset" value="Reset" name="Reset"></th></tr>
+</table>
+</form>
+</body>
+</html>
